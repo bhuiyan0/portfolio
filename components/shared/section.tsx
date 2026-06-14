@@ -19,12 +19,12 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn("scroll-mt-10 py-10 sm:py-12", className)}
+      className={cn("scroll-mt-20 py-24 sm:py-32", className)}
       {...props}
     >
       <div className="mx-auto w-full max-w-5xl px-6">
         {(eyebrow || title || description) && (
-          <div className="mb-8 max-w-2xl sm:mb-10">
+          <div className="mb-14 max-w-2xl">
             {eyebrow && (
               <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-brand">
                 {eyebrow}

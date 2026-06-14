@@ -11,7 +11,7 @@ export function Hero() {
       <div className="bg-dots absolute inset-0 -z-20 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
       <Glow className="left-1/2 top-0 -translate-x-1/2 -translate-y-1/3" />
 
-      <div className="mx-auto flex w-full max-w-5xl flex-col items-start px-6 pb-16 pt-28 sm:pb-24 sm:pt-36">
+      <div className="mx-auto flex w-full max-w-5xl flex-col items-start px-6 pb-28 pt-40 sm:pb-36 sm:pt-52">
         <Badge
           variant="secondary"
           className="mb-8 gap-2 rounded-full border border-border/60 bg-background/60 px-3.5 py-1.5 backdrop-blur"
