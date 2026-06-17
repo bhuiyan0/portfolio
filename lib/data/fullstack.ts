@@ -15,6 +15,7 @@ export const fullstack: PortfolioData = {
     role: "Full Stack JavaScript Developer",
     tagline:
       "Full Stack Developer with 5+ years of experience building SaaS, e-commerce, and geospatial web applications with JavaScript and TypeScript — Node.js, NestJS, and TypeORM over MySQL and MongoDB on the back; React, Next.js, and Svelte on the front.",
+    headline: "Building robust, full-stack applications for the modern web.",
     aboutTitle: "A full-stack developer who ships end-to-end",
     about: [
       "I'm a full-stack developer with 5+ years of experience building SaaS, e-commerce, and geospatial web applications across the JavaScript and TypeScript stack — comfortable owning a feature from the database to the UI.",

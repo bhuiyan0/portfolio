@@ -26,9 +26,7 @@ export function Hero() {
         <h1 className="max-w-3xl text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-6xl md:text-7xl">
           <span className="text-gradient">{profile.name}.</span>
           <br />
-          <span className="text-muted-foreground/80">
-            Building fast, polished interfaces for the modern web.
-          </span>
+          <span className="text-muted-foreground/80">{profile.headline}</span>
         </h1>
 
         <p className="mt-8 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
