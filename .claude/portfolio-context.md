@@ -40,17 +40,37 @@ components/
   shared/                 Reusable building blocks (section, fade-in, glow, dividers, providers)
   ui/                     shadcn/ui primitives (button, card, badge, sheet, tooltip, separator)
 lib/
-  data.ts                 ALL site content + the TypeScript interfaces that type it
+  data/                   ALL site content + the TypeScript interfaces that type it
+    types.ts              Interfaces (Profile, SkillGroup, …) + the PortfolioData bundle
+    shared.ts             Content identical across variants (navLinks, socialLinks, education, email)
+    frontend.ts           Frontend-engineer variant (default)
+    fullstack.ts          Full-stack JavaScript variant
+    index.ts              Selects the active variant via env var; re-exports the public API
   utils.ts                cn() class-merge helper
-public/                   Static assets (résumé PDF, images)
+public/                   Static assets (résumé PDFs, images)
 ```
 
 ## Content lives in one place
 
 Every piece of copy — profile, stats, skills, experience, projects, social links, nav —
-is defined in **`lib/data.ts`** with an exported interface for each shape. Sections are
-presentational: they import typed data and render it. To change site content, edit
-`lib/data.ts`, not the components.
+is defined under **`lib/data/`** with an exported interface for each shape. Sections are
+presentational: they import typed data from `@/lib/data` and render it. To change site
+content, edit the relevant variant file (`frontend.ts` / `fullstack.ts`) or `shared.ts` —
+not the components. The import path `@/lib/data` resolves to `lib/data/index.ts`.
+
+## Portfolio variants
+
+The site ships two personas selected at **build time** by the
+`NEXT_PUBLIC_PORTFOLIO_VARIANT` environment variable:
+
+- `frontend` (default, or any unrecognized value) — Senior Frontend Engineer.
+- `fullstack` — Full Stack JavaScript Engineer (own résumé:
+  `public/Mamun_Bhuiyan_Full_Stack_Resume.pdf`).
+
+It **must** stay `NEXT_PUBLIC_`-prefixed: the header and mobile nav are client components
+that read this data, and Next.js only inlines `NEXT_PUBLIC_*` vars into the client bundle.
+`index.ts` picks the variant; `shared.ts` holds what doesn't change between them. See
+`.env.example`. Example: `NEXT_PUBLIC_PORTFOLIO_VARIANT=fullstack npm run dev`.
 
 ## Key conventions (see the dedicated docs)
 

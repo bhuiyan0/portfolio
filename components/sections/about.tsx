@@ -4,7 +4,7 @@ import { education, profile } from "@/lib/data";
 
 export function About() {
   return (
-    <Section id="about" eyebrow="About" title="A frontend engineer who ships">
+    <Section id="about" eyebrow="About" title={profile.aboutTitle}>
       <div className="grid gap-12 lg:grid-cols-[2fr_1fr]">
         <div className="space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
           {profile.about.map((paragraph) => (
