@@ -8,7 +8,7 @@ export function Glow({ className }: { className?: string }) {
     <div
       aria-hidden
       className={cn(
-        "pointer-events-none absolute -z-10 h-[480px] w-[640px] rounded-full blur-2xl",
+        "pointer-events-none absolute -z-10 h-[320px] w-[380px] rounded-full blur-2xl sm:h-[480px] sm:w-[640px]",
         "bg-[radial-gradient(ellipse_at_center,color-mix(in_oklch,var(--brand)_12%,transparent),transparent_65%)]",
         "dark:bg-[radial-gradient(ellipse_at_center,color-mix(in_oklch,var(--brand)_20%,transparent),transparent_65%)]",
         className

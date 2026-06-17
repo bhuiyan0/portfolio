@@ -16,7 +16,7 @@ export function SiteFooter() {
               target={social.href.startsWith("mailto:") ? undefined : "_blank"}
               rel="noreferrer"
               aria-label={social.label}
-              className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <social.icon className="size-4" />
             </a>

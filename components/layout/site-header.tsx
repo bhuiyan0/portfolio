@@ -10,12 +10,32 @@ import { ThemeToggle } from "./theme-toggle";
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
+  const [activeId, setActiveId] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Highlight the nav link for whichever section is crossing the viewport's middle.
+  useEffect(() => {
+    const sections = navLinks
+      .map((link) => document.getElementById(link.href.slice(1)))
+      .filter((el): el is HTMLElement => el !== null);
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) setActiveId(entry.target.id);
+        }
+      },
+      { rootMargin: "-45% 0px -50% 0px" }
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -36,13 +56,25 @@ export function SiteHeader() {
         </Link>
 
         <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
-          {navLinks.map((link) => (
-            <Button key={link.href} asChild variant="ghost" size="sm">
-              <Link href={link.href} className="text-muted-foreground">
-                {link.label}
-              </Link>
-            </Button>
-          ))}
+          {navLinks.map((link) => {
+            const active = activeId === link.href.slice(1);
+            return (
+              <Button key={link.href} asChild variant="ghost" size="sm">
+                <Link
+                  href={link.href}
+                  aria-current={active ? "true" : undefined}
+                  className={cn(
+                    "transition-colors",
+                    active
+                      ? "font-medium text-foreground"
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              </Button>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-2">

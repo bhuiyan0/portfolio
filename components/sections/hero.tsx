@@ -17,7 +17,7 @@ export function Hero() {
           className="mb-8 gap-2 rounded-full border border-border/60 bg-background/60 px-3.5 py-1.5 backdrop-blur"
         >
           <span className="relative flex size-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+            <span className="absolute inline-flex h-full w-full motion-safe:animate-ping rounded-full bg-emerald-400 opacity-60" />
             <span className="relative inline-flex size-2 rounded-full bg-emerald-400" />
           </span>
           {profile.availability}
@@ -63,7 +63,7 @@ export function Hero() {
                 }
                 rel="noreferrer"
                 aria-label={social.label}
-                className="rounded-md p-2 text-muted-foreground transition-colors duration-200 hover:bg-muted hover:text-foreground"
+                className="rounded-md p-2 text-muted-foreground transition-colors duration-200 hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 <social.icon className="size-5" />
               </a>
