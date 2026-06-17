@@ -5,6 +5,8 @@ export interface Profile {
   name: string;
   role: string;
   tagline: string;
+  /** Hero subtitle shown under the name. */
+  headline: string;
   /** Heading shown on the About section. */
   aboutTitle: string;
   about: string[];

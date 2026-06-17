@@ -12,6 +12,7 @@ export const frontend: PortfolioData = {
     role: "Senior Frontend Engineer",
     tagline:
       "Senior Frontend Engineer with 5+ years of experience building SaaS, geospatial, and full-stack web applications with React, Next.js, TypeScript, and Svelte.",
+    headline: "Building fast, polished interfaces for the modern web.",
     aboutTitle: "A frontend engineer who ships",
     about: [
       "I'm a frontend engineer with 5+ years of experience shipping SaaS, geospatial, and full-stack web applications. I've led platform modernization initiatives — most recently migrating legacy PropCloud features into Placepoint as part of a platform consolidation effort.",
