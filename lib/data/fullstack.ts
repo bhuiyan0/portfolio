@@ -1,4 +1,4 @@
-import { Code2, Database, Layers, Map, Server, Sparkles } from "lucide-react";
+import { Code2, Layers, Map, Server, Sparkles } from "lucide-react";
 import { email } from "./shared";
 import type { PortfolioData } from "./types";
 
@@ -7,20 +7,20 @@ import type { PortfolioData } from "./types";
  * NEXT_PUBLIC_PORTFOLIO_VARIANT === "fullstack".
  *
  * Content mirrors public/Mamun_Bhuiyan_Resume_Full_Stack.pdf
- * ("Full Stack JavaScript Developer").
+ * ("Full Stack JavaScript Engineer").
  */
 export const fullstack: PortfolioData = {
   profile: {
     name: "Mamun Bhuiyan",
-    role: "Full Stack JavaScript Developer",
+    role: "Full Stack JavaScript Engineer",
     tagline:
-      "Full Stack Developer with 5+ years of experience building SaaS, e-commerce, and geospatial web applications with JavaScript and TypeScript — Node.js, NestJS, and TypeORM over MySQL and MongoDB on the back; React, Next.js, and Svelte on the front.",
-    headline: "Building robust, full-stack applications for the modern web.",
-    aboutTitle: "A full-stack developer who ships end-to-end",
+      "Senior Full Stack JavaScript Engineer with 5+ years of experience building scalable SaaS, PropTech, ecommerce, geospatial, and business applications — proficient in React, Next.js, NestJS, TypeScript, GraphQL, and REST APIs, delivering end-to-end solutions from backend services to modern frontend interfaces.",
+    headline: "Building scalable, full-stack JavaScript applications from backend to browser.",
+    aboutTitle: "A full-stack engineer who ships end-to-end",
     about: [
-      "I'm a full-stack developer with 5+ years of experience building SaaS, e-commerce, and geospatial web applications across the JavaScript and TypeScript stack — comfortable owning a feature from the database to the UI.",
-      "On the backend I build services with Node.js and NestJS, designing REST APIs, authentication and authorization (JWT), and third-party integrations, with data layers backed by TypeORM over MySQL and MongoDB.",
-      "On the frontend I build modern applications with React, Next.js, and Svelte, styled with Tailwind CSS and shadcn/ui — including interactive mapping work with ArcGIS, Mapbox, and OpenLayers.",
+      "I'm a Senior Full Stack JavaScript Engineer with 5+ years of experience building scalable SaaS, PropTech, e-commerce, geospatial, and business applications — comfortable owning a feature from the database to the UI.",
+      "On the backend I build services with Node.js and NestJS, designing REST and GraphQL APIs, authentication, and third-party integrations, with data layers backed by TypeORM over MySQL.",
+      "On the frontend I build modern applications with React, Next.js, and Svelte, styled with Tailwind CSS and shadcn/ui — including interactive geospatial work with the ArcGIS Maps SDK for JavaScript.",
     ],
     email,
     location: "Dhaka, Bangladesh",
@@ -29,7 +29,7 @@ export const fullstack: PortfolioData = {
     stats: [
       { value: "5+", label: "Years of experience" },
       { value: "End-to-end", label: "TypeScript across client, API, and data" },
-      { value: "3", label: "Domains: SaaS, e-commerce, geospatial" },
+      { value: "4", label: "Domains: SaaS, PropTech, e-commerce, geospatial" },
     ],
   },
 
@@ -37,23 +37,17 @@ export const fullstack: PortfolioData = {
     {
       title: "Backend & APIs",
       description:
-        "Server-side services, clean REST APIs, and secure auth across the Node ecosystem.",
+        "Server-side services, clean REST and GraphQL APIs across the Node ecosystem.",
       icon: Server,
       skills: [
         "Node.js",
         "NestJS",
         "TypeScript",
         "REST APIs",
+        "GraphQL",
         "TypeORM",
-        "Authentication & Authorization (JWT)",
-        "API Integration",
+        "MySQL",
       ],
-    },
-    {
-      title: "Databases",
-      description: "Relational and document data layers — schema design and queries.",
-      icon: Database,
-      skills: ["MySQL", "MongoDB"],
     },
     {
       title: "Frontend",
@@ -77,9 +71,7 @@ export const fullstack: PortfolioData = {
       description: "Interactive maps and spatial data visualization at scale.",
       icon: Map,
       skills: [
-        "ArcGIS",
-        "Mapbox",
-        "OpenLayers",
+        "ArcGIS Maps SDK for JavaScript",
         "Spatial Data Visualization",
         "Interactive Mapping",
       ],
@@ -88,7 +80,7 @@ export const fullstack: PortfolioData = {
       title: "AI-Assisted Engineering",
       description: "Multiplying output with LLM tooling and agentic workflows.",
       icon: Sparkles,
-      skills: ["Claude", "Cursor", "Prompt Engineering"],
+      skills: ["Claude", "Cursor", "Prompt Engineering", "Agentic Development Workflows"],
     },
     {
       title: "Architecture & Engineering",
@@ -96,7 +88,7 @@ export const fullstack: PortfolioData = {
         "The practices that keep large codebases fast to work in and easy to scale.",
       icon: Layers,
       skills: [
-        "Full Stack Development",
+        "Frontend Architecture",
         "Monorepo Architecture",
         "Component Libraries",
         "Performance Optimization",
@@ -111,25 +103,27 @@ export const fullstack: PortfolioData = {
   experiences: [
     {
       company: "Softwrd Ltd",
-      role: "Frontend Engineer",
-      period: "Jan 2022 — Jun 2026",
+      role: "Senior Frontend Engineer",
+      period: "Jan 2021 — Jun 2026",
       location: "Dhaka, Bangladesh",
       summary:
-        "Building scalable SaaS and geospatial products, and driving platform consolidation efforts.",
+        "Worked on Norway's leading PropTech SaaS platforms (Placepoint & PropCloud), delivering property management, valuation, and geospatial solutions.",
       highlights: [
-        "Led migration of legacy PropCloud features into Placepoint, supporting platform consolidation efforts.",
-        "Built scalable SaaS applications using React, Svelte, TypeScript, Tailwind CSS, and shadcn/ui.",
-        "Developed geospatial features using ArcGIS, Mapbox, and OpenLayers for map-based workflows and data visualization.",
+        "Developed scalable applications using React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
+        "Integrated REST and GraphQL APIs to deliver dynamic, data-driven user experiences.",
+        "Built interactive geospatial features using the ArcGIS Maps SDK for JavaScript.",
+        "Developed reusable UI components with Storybook and contributed to an Nx monorepo architecture.",
       ],
       stack: [
         "React",
-        "Svelte",
+        "Next.js",
         "TypeScript",
         "Tailwind CSS",
         "shadcn/ui",
-        "ArcGIS",
-        "Mapbox",
-        "OpenLayers",
+        "GraphQL",
+        "ArcGIS Maps SDK",
+        "Storybook",
+        "Nx",
       ],
     },
     {
@@ -138,12 +132,11 @@ export const fullstack: PortfolioData = {
       period: "Jun 2020 — Dec 2021",
       location: "Dhaka, Bangladesh",
       summary:
-        "Designed and maintained full-stack web applications for e-commerce and business clients.",
+        "Built full-stack e-commerce applications using React, Next.js, NestJS, and MySQL.",
       highlights: [
-        "Designed and maintained full-stack web applications using Next.js, NestJS, TypeScript, and JavaScript.",
-        "Built customer-facing interfaces, backend services, and REST APIs for e-commerce platforms.",
-        "Implemented authentication and authorization systems, API integrations, and core business workflows.",
-        "Developed and maintained backend services using NestJS and Node.js.",
+        "Developed responsive frontend applications with React, Next.js, and TypeScript.",
+        "Designed and implemented backend REST APIs, authentication, and business workflows using NestJS.",
+        "Delivered scalable, maintainable features across the full software development lifecycle.",
       ],
       stack: [
         "Next.js",
@@ -151,7 +144,6 @@ export const fullstack: PortfolioData = {
         "Node.js",
         "TypeScript",
         "MySQL",
-        "MongoDB",
         "TypeORM",
         "REST APIs",
       ],
