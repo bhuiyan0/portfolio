@@ -34,8 +34,8 @@ export const education: Education[] = [
     period: "2018 — 2019",
   },
   {
-    degree: "Bachelor of Commerce (BCom)",
-    institution: "National University, Bangladesh",
+    degree: "Bachelor of Commerce",
+    institution: "NU, Bangladesh",
     period: "2013 — 2016",
   },
 ];

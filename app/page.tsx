@@ -3,6 +3,7 @@ import { SectionDivider } from "@/components/shared/section-divider";
 import { About } from "@/components/sections/about";
 import { Contact } from "@/components/sections/contact";
 import { Experience } from "@/components/sections/experience";
+import { GitHubContributions } from "@/components/sections/github-contributions";
 import { Hero } from "@/components/sections/hero";
 import { Projects } from "@/components/sections/projects";
 import { Skills } from "@/components/sections/skills";
@@ -25,6 +26,10 @@ export default function Home() {
       <SectionDivider />
       <FadeIn>
         <Projects />
+      </FadeIn>
+      <SectionDivider />
+      <FadeIn>
+        <GitHubContributions />
       </FadeIn>
       <SectionDivider />
       <FadeIn>
